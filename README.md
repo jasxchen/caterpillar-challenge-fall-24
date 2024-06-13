@@ -12,7 +12,7 @@
 4. Mapping sessions to participants By iterating through the sessions, I created a dictionary that maps session IDs to participant IDs. This allowed me to link scores from rounds to the correct participants.
 5. Calculating average scores: For each round, I fetched the score and the corresponding session ID, then used mapping to find the participant ID. Scores were then aggregated for each participant, and averages were calculated by dividing the sum of scores by the number of scores.
 6. Mapping participant names: A dictionary is created to map participand IDs to their names, allowing me to output meaningful results.
-7. Printing results: Finally, I printed each participant's name and their average score, formatted to two decimal places for more clarity.
+7. Printing results: Finally, I printed each participant's name and their average score, formatted to two decimal places for more clarity. The results are sorted by the participant names in ascending order.
 
 ### Technical Challenges
 1. Handling JSON data: It was difficult to ensure that the JSON data was correctly parsed and handled, especially considering the potential changes in the data structure.
