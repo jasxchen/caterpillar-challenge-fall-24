@@ -53,7 +53,12 @@ for participant_id, scores in participant_scores.items():
 # Map participant IDs to participant names
 participant_names = {p['participantId']: p['name'] for p in participants}
 
+# Combine names and average scores into a list of tuples and sort by name
+sorted_participant_scores = sorted(
+    [(participant_names[participant_id], avg_score) for participant_id, avg_score in participant_avg_scores.items()],
+    key=lambda x: x[0]
+)
+
 # Print results
-for participant_id, avg_score in participant_avg_scores.items():
-    name = participant_names.get(participant_id, 'Unknown')
+for name, avg_score in sorted_participant_scores:
     print(f"Participant: {name}, Average Score: {avg_score:.2f}")
